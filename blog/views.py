@@ -35,6 +35,13 @@ class UserPostListView(ListView):
       return Post.objects.filter(author=user).order_by('-date_posted')
 
 
+class LatestPostListView(ListView):
+    model = Post
+    template_name = 'blog/lastest_post.html'
+    #context_object_name = 'posts'
+    
+
+
 class PostDetailView(DetailView):
     model = Post
 

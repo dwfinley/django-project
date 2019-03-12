@@ -37,10 +37,13 @@ class UserPostListView(ListView):
 
 class LatestPostListView(ListView):
     model = Post
-    template_name = 'blog/lastest_post.html'
-    #context_object_name = 'posts'
+    template_name = 'blog/latest_post.html'
+    context_object_name = 'posts'
     
-
+class AnnouncementsPostListView(ListView):
+  model = Post
+  template_name = 'blog/announcements_post.html'
+  context_object_name = 'posts'
 
 class PostDetailView(DetailView):
     model = Post

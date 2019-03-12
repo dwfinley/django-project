@@ -1,1 +1,1 @@
-web: gunicorn secondtry.wsgi
+web: gunicorn SecondTry.wsgi
